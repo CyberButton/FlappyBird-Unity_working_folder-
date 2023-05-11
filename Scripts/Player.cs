@@ -47,4 +47,11 @@ public class Player : MonoBehaviour
         sRender.sprite = sprites[currSpriteIndex];
     }
 
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "Pipe") {
+            FindObjectOfType<GameManager>().HitObstacle();
+        } else if(other.gameObject.tag == "Score") {
+            FindObjectOfType<GameManager>().IncrementScore();
+        }
+    }
 }
