@@ -6,9 +6,12 @@ public class Player : MonoBehaviour
     private float rotationSpeed = 5f;      // to rotate the bird
     private SpriteRenderer sRender;         // for animation
     private int currSpriteIndex;
+    [SerializeField]private AudioSource wingFlap;
+    [SerializeField]private AudioSource hitPipe;
+    [SerializeField]private AudioSource addScore;
 
     // public variables are availabe for customization in the editor
-    public float gravity = -9.8f;           
+    public float gravity = -10f;           
     public float strength = 5f;
     public Sprite[] sprites;    
 
@@ -34,7 +37,8 @@ public class Player : MonoBehaviour
     // updates each frame
     private void Update() { 
         //if "Space" key is pressed
-        if(Input.GetKeyDown(KeyCode.Space)) {   
+        if(Input.GetKeyDown(KeyCode.Space)) { 
+            wingFlap.Play();  
             direction = Vector3.up * strength;
         }
 
@@ -61,8 +65,10 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Pipe") {
+            hitPipe.Play();
             FindObjectOfType<GameManager>().HitObstacle();
         } else if(other.gameObject.tag == "Score") {
+            addScore.Play();
             FindObjectOfType<GameManager>().IncrementScore();
         }
     }
