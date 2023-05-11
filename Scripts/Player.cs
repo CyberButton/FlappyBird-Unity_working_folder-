@@ -17,6 +17,14 @@ public class Player : MonoBehaviour
         sRender = GetComponent<SpriteRenderer>();
     } 
 
+    //reset y-pos after each death
+    private void OnEnable() {
+        Vector3 resetPos = transform.position;
+        resetPos.y = 0;
+        transform.position = resetPos;
+        direction = Vector3.zero;
+    }
+
     // called before the first frame
     private void Start() {
         //repeatedly calls "AnimateBird" after 0.15s, with delay before the first call
