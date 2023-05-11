@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     // public variables are availabe for customization in the editor
     public float gravity = -9.8f;           
     public float strength = 5f;
-    public Sprite[] sprites;
+    public Sprite[] sprites;    
 
     // called before Strat() and called only once in the lifetime of a script, when the script is first loaded
     private void Awake() {
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         if(currSpriteIndex == sprites.Length) {
             currSpriteIndex = 0;
         }
-
+        //update sprites
         sRender.sprite = sprites[currSpriteIndex];
     }
 
