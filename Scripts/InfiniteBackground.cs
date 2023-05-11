@@ -5,6 +5,7 @@ public class InfiniteBackground : MonoBehaviour
 {
     private MeshRenderer mRenderer;
 
+    //this script is used for both background and ground, each has its own offsetSpeed
     public float offsetSpeed = 1f;
 
     private void Awake() {
