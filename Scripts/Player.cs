@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Vector3 direction;              // 3 dimensional vector to represent direction
-    private float rotationSpeed = 10f;      // to rotate the bird
+    private float rotationSpeed = 5f;      // to rotate the bird
     private SpriteRenderer sRender;         // for animation
     private int currSpriteIndex;
 
@@ -41,6 +41,10 @@ public class Player : MonoBehaviour
         //apply gravity at each unit of time ( ignores frame-rate )
         direction.y += gravity * Time.deltaTime;
         transform.position += direction * Time.deltaTime;
+
+        Vector3 rotation = transform.eulerAngles;
+        rotation.z = direction.y * rotationSpeed;
+        transform.eulerAngles = rotation;
     }
 
     //flying bird animation
