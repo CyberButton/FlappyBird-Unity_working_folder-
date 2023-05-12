@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Pipe") {
+        if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Pipe-bottom") {
             hitPipe.Play();
             FindObjectOfType<GameManager>().HitObstacle();
         } else if(other.gameObject.tag == "Score") {

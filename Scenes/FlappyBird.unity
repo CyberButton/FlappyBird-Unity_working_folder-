@@ -405,6 +405,7 @@ MonoBehaviour:
   buttonPlay: {fileID: 2097022309}
   gameOver: {fileID: 1857378498}
   player: {fileID: 1962457522}
+  spawner: {fileID: 1090007484}
 --- !u!4 &1019924375
 Transform:
   m_ObjectHideFlags: 0
@@ -449,10 +450,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae20cf8b6881e24abfe20d90c248765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2609910333057567094, guid: 21e2f2dc83d28a04b8d88bf85461d00b, type: 3}
-  spawnRate: 1
-  minHeight: -1
-  maxHeight: 1
+  bottomPipePrefab: {fileID: 5139712171422370655, guid: 63326ab3e75d43e4cab1008d058f364d, type: 3}
+  scoreHitboxPrefab: {fileID: 8224545862398192726, guid: 2d5b2dfecc771b842a80e0a510231bbb, type: 3}
+  initialSpawnRate: 1.5
+  minSpawnRate: 0.5
+  spawnRateDecrement: 0.03
 --- !u!4 &1090007486
 Transform:
   m_ObjectHideFlags: 0
@@ -682,7 +684,7 @@ GameObject:
   - component: {fileID: 1792617232}
   m_Layer: 0
   m_Name: Ground(Quad)
-  m_TagString: Pipe
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

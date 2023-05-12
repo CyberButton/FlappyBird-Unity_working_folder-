@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject buttonPlay;
     public GameObject gameOver;
     public Player player;
+    public InfinitePipes spawner;
     
     private void Awake() {
         Application.targetFrameRate = 60;
@@ -26,20 +27,19 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;      
         player.enabled = true;
 
-        GameObject[] pipes = GameObject.FindGameObjectsWithTag("ToDestroy");
+        GameObject[] pipes = GameObject.FindGameObjectsWithTag("Pipe-bottom");
+        GameObject[] hBoxes = GameObject.FindGameObjectsWithTag("Score");
+
 
         foreach (GameObject pipe in pipes) {
             Destroy(pipe.gameObject);
         }
 
-        // Pipes[] pipes = FindObjectsOfType<Pipes>();
+        foreach (GameObject box in hBoxes) {
+            Destroy(box.gameObject);
+        }
 
-        // // foreach (Pipes pipe in pipes) {
-        // //     Destroy(pipe.gameObject);
-        // // }
-        // for(int i = 0; i < pipes.Length; i++) {
-        //     Destroy(pipes[i].gameObject);
-        // }
+        spawner.enabled = true;
     }
 
     public void Pause() {
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         //disable player
         player.enabled = false;
+        spawner.enabled = false;
     }
 
     public void IncrementScore() {
