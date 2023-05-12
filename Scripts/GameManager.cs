@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public InfinitePipes spawner;
     public GameObject resetButton;
-    
+    public GameObject quitButton;    
     
     private void Awake() {
         Application.targetFrameRate = 60;
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         BG.SetActive(false);
         highScore.SetActive(false);
         resetButton.SetActive(false);
+        quitButton.SetActive(false);
         Pause();
         resetScoreX();
     }
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         BG.SetActive(false);    
         highScore.SetActive(false);
         resetButton.SetActive(false);
+        quitButton.SetActive(false);
 
 
         Time.timeScale = 1f;      
@@ -81,6 +83,7 @@ public class GameManager : MonoBehaviour
         BG.SetActive(true);
         highScore.SetActive(true);
         resetButton.SetActive(true);
+        quitButton.SetActive(true);
 
 
         int highestScore = PlayerPrefs.GetInt("HighestScore");
