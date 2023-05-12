@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     // public variables are availabe for customization in the editor
     public float gravity = -10f;           
     public float strength = 5f;
-    public Sprite[] sprites;    
+    public Sprite[] yellowSprites;    
+    public Sprite[] blueSprites;    
 
     // called before Strat() and called only once in the lifetime of a script, when the script is first loaded
     private void Awake() {
@@ -26,12 +27,15 @@ public class Player : MonoBehaviour
         resetPos.y = 0;
         transform.position = resetPos;
         direction = Vector3.zero;
-    }
 
-    // called before the first frame
-    private void Start() {
         //repeatedly calls "AnimateBird" after 0.15s, with delay before the first call
-        InvokeRepeating(nameof(AnimateBird), 0.1f, 0.17f);
+        if(GameManager.isDarkMode) {
+            CancelInvoke(nameof(AnimateBirdYellow));
+            InvokeRepeating(nameof(AnimateBirdBlue), 0.1f, 0.17f);
+        } else {
+            CancelInvoke(nameof(AnimateBirdBlue));
+            InvokeRepeating(nameof(AnimateBirdYellow), 0.1f, 0.17f);
+        }
     }
 
     // updates each frame
@@ -52,15 +56,24 @@ public class Player : MonoBehaviour
     }
 
     //flying bird animation
-    private void AnimateBird() {
+    private void AnimateBirdYellow() {
         currSpriteIndex++;
 
         //loop back
-        if(currSpriteIndex == sprites.Length) {
+        if(currSpriteIndex == yellowSprites.Length) {
             currSpriteIndex = 0;
         }
         //update sprites
-        sRender.sprite = sprites[currSpriteIndex];
+        sRender.sprite = yellowSprites[currSpriteIndex];
+    }
+    
+    //same but blue
+    private void AnimateBirdBlue() {
+        currSpriteIndex++;
+        if(currSpriteIndex == blueSprites.Length) {
+            currSpriteIndex = 0;
+        }
+        sRender.sprite = blueSprites[currSpriteIndex];
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

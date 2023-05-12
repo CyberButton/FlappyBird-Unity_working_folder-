@@ -17,7 +17,10 @@ public class GameManager : MonoBehaviour
     public InfinitePipes spawner;
     public GameObject resetButton;
     public GameObject quitButton;    
+    public GameObject switchThemeButton;    
     
+    public static bool isDarkMode = false;
+
     private void Awake() {
         Application.targetFrameRate = 60;
         gameOver.SetActive(false);  
@@ -26,6 +29,7 @@ public class GameManager : MonoBehaviour
         highScore.SetActive(false);
         resetButton.SetActive(false);
         quitButton.SetActive(false);
+        switchThemeButton.SetActive(true);
         Pause();
         resetScoreX();
     }
@@ -42,7 +46,7 @@ public class GameManager : MonoBehaviour
         highScore.SetActive(false);
         resetButton.SetActive(false);
         quitButton.SetActive(false);
-
+        switchThemeButton.SetActive(false);
 
         Time.timeScale = 1f;      
         player.enabled = true;
@@ -84,6 +88,7 @@ public class GameManager : MonoBehaviour
         highScore.SetActive(true);
         resetButton.SetActive(true);
         quitButton.SetActive(true);
+        switchThemeButton.SetActive(true);
 
 
         int highestScore = PlayerPrefs.GetInt("HighestScore");
@@ -103,9 +108,14 @@ public class GameManager : MonoBehaviour
         Vector2 newPosition = textTransform.anchoredPosition + new Vector2(417.62f, 0f);
         textTransform.anchoredPosition = newPosition;
     }
+    
     private void resetScoreX() {
         RectTransform textTransform = textScore.GetComponent<RectTransform>();
         Vector2 newPosition = new Vector2(16.3f, -158.2f);
         textTransform.anchoredPosition = newPosition;
+    }
+
+    public void switchTheme(){
+        isDarkMode = !isDarkMode;
     }
 }
