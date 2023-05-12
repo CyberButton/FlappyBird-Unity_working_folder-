@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     private int currScore;
 
     public GameObject currentScore;
+    public GameObject highScore;
+    public Text textHighScore;
     public GameObject BG;
     public Text textScore;
     public GameObject buttonPlay;
@@ -19,7 +21,9 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(false);  
         currentScore.SetActive(false);
         BG.SetActive(false);
+        highScore.SetActive(false);
         Pause();
+        resetScoreX();
     }
  
     public void Play() {
@@ -31,6 +35,8 @@ public class GameManager : MonoBehaviour
         buttonPlay.SetActive(false);
         currentScore.SetActive(false);
         BG.SetActive(false);    
+        highScore.SetActive(false);
+
 
         Time.timeScale = 1f;      
         player.enabled = true;
@@ -69,6 +75,15 @@ public class GameManager : MonoBehaviour
         buttonPlay.SetActive(true);
         currentScore.SetActive(true);
         BG.SetActive(true);
+        highScore.SetActive(true);
+
+        int highestScore = PlayerPrefs.GetInt("HighestScore");
+        if (currScore > highestScore) {
+        PlayerPrefs.SetInt("HighestScore", currScore);
+        PlayerPrefs.Save();
+        highestScore = currScore;
+        }
+        textHighScore.text = "highscore:" + highestScore.ToString();
         Pause();
     }
 
