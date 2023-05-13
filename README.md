@@ -2,21 +2,25 @@
 Reamke of famous FlappyBird game, with similar gameplay and physics
 
 ## How to Install:
-Step 1: Download **build.rar** archive.
 
-    - staright from the github:
+ **Note: target build OS is Windows, architecture x86-64**
+
+### Step 1: Download **build.rar** archive.
+
+   from the github - https://github.com/CyberButton/FlappyBird-Unity_working_folder-/blob/master/build.rar
     
+   ![image](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/47c45993-b5d2-44c7-a55d-9db0f66269b4)
     
     - (alternative)from google drive:
     link 1: https://drive.google.com/file/d/1kYZkDttmBKzClTKaWpr2dkczUyntmMmA/view?usp=share_link
     link 2: https://drive.google.com/file/d/1gZ185uqRCZJ5lQyFs2Hgsg78IIQfl6cI/view?usp=share_link
 
-Step 2: Exctract it into 1 single folder.(IMPORTANT: all of the contents of the archive must be in one folder)
+### Step 2: Exctract it into 1 single folder.(IMPORTANT: all of the contents of the archive must be in one folder)
 ![image](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/9817586c-1d87-4e50-88dd-4319c0a06330)
 
-Step 3: Launch "nFactorial_FlappyBird.exe"
+### Step 3: Launch "nFactorial_FlappyBird.exe"
 
-## Game preview:
+# Game preview:
 
 ![trailer_Trim (3)](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/e0e14d5d-67c1-41bd-9b12-20cb757fb332)
 
