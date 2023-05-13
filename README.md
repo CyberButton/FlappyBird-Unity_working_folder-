@@ -9,7 +9,7 @@ Reamke of famous FlappyBird game, with similar gameplay and physics
 
 ### Step 1: Download **build.rar** archive.
 
-   from the github - https://github.com/CyberButton/FlappyBird-Unity_working_folder-/blob/master/build.rar
+   from the github - https://github.com/CyberButton/FlappyBird-Unity_working_folder-/blob/74e77fa8dd3bf0922416790dd3eb16b4cedc2c35/build.rar
     
    ![image](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/47c45993-b5d2-44c7-a55d-9db0f66269b4)
     
