@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public float strength = 5f;
     public Sprite[] yellowSprites;    
     public Sprite[] blueSprites;    
+    public ParticleSystem feather;
 
     // called before Strat() and called only once in the lifetime of a script, when the script is first loaded
     private void Awake() {
@@ -42,6 +43,7 @@ public class Player : MonoBehaviour
     private void Update() { 
         // if "Space" key is pressed
         if(Input.GetKeyDown(KeyCode.Space)) { 
+            feather.Play();
             wingFlap.Play();  
             direction = Vector3.up * strength;
         }
