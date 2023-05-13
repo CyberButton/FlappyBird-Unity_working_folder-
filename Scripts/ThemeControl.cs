@@ -1,12 +1,16 @@
 using UnityEngine;
 
+/*  
+    this could be implemented using events and delegates
+    but for small game my implementation is "ok"
+*/
+
 public class ThemeControl : MonoBehaviour
 {
     public GameObject lightBG;
     public GameObject darkBG;
     public GameObject yellowBird;
     public GameObject blueBird;
-
 
     public void Awake() {
         darkBG.SetActive(false);

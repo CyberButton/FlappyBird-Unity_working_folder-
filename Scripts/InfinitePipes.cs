@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class InfinitePipes : MonoBehaviour
 {
-    //refrence to pipe
     public GameObject bottomPipePrefab; 
     public GameObject scoreHitboxPrefab;
     
@@ -12,24 +11,24 @@ public class InfinitePipes : MonoBehaviour
 
     private float currentSpawnRate;
 
-    //create new obstacles repetadely 
+    // create new obstacles repetadely 
     private void OnEnable() {
         currentSpawnRate = initialSpawnRate;
         InvokeRepeating(nameof(CreateObstacle), currentSpawnRate, currentSpawnRate);
     }
-
+    // stop generating obstacles
     private void OnDisable() {
-        //currentSpawnRate = initialSpawnRate;
         CancelInvoke(nameof(CreateObstacle));
     }
 
+    // spawn pipes at random hights
     private void CreateObstacle() {
         GameObject bottomPipe = Instantiate(bottomPipePrefab, transform.position, Quaternion.identity);
-        float randomYPosition = Random.Range(-7.5f, -10f); // adjust this range as needed 
+        float randomYPosition = Random.Range(-7.5f, -10f);
         bottomPipe.transform.position = new Vector3(bottomPipe.transform.position.x, bottomPipe.transform.position.y + randomYPosition, bottomPipe.transform.position.z);
 
         GameObject topPipe = Instantiate(bottomPipePrefab, transform.position, Quaternion.identity);
-        randomYPosition = Random.Range(7.5f, 10f); // adjust this range as needed 
+        randomYPosition = Random.Range(7.5f, 10f); 
         topPipe.transform.Rotate(new Vector3(0f, 0f, 180f));
         topPipe.transform.position = new Vector3(topPipe.transform.position.x, topPipe.transform.position.y + randomYPosition, topPipe.transform.position.z);
 

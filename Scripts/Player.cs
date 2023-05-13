@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Vector3 direction;              // 3 dimensional vector to represent direction
-    private float rotationSpeed = 5f;      // to rotate the bird
+    private float rotationSpeed = 5f;       // to rotate the bird
     private SpriteRenderer sRender;         // for animation
     private int currSpriteIndex;
     [SerializeField]private AudioSource wingFlap;
@@ -21,14 +21,14 @@ public class Player : MonoBehaviour
         sRender = GetComponent<SpriteRenderer>();
     } 
 
-    //reset y-pos after each death
+    // reset y-pos after each death
     private void OnEnable() {
         Vector3 resetPos = transform.position;
         resetPos.y = 0;
         transform.position = resetPos;
         direction = Vector3.zero;
 
-        //repeatedly calls "AnimateBird" after 0.15s, with delay before the first call
+        // repeatedly calls "AnimateBird", with delay before the first call
         if(GameManager.isDarkMode) {
             CancelInvoke(nameof(AnimateBirdYellow));
             InvokeRepeating(nameof(AnimateBirdBlue), 0.1f, 0.17f);
@@ -40,13 +40,13 @@ public class Player : MonoBehaviour
 
     // updates each frame
     private void Update() { 
-        //if "Space" key is pressed
+        // if "Space" key is pressed
         if(Input.GetKeyDown(KeyCode.Space)) { 
             wingFlap.Play();  
             direction = Vector3.up * strength;
         }
 
-        //apply gravity at each unit of time ( ignores frame-rate )
+        // apply gravity at each unit of time ( ignores frame-rate )
         direction.y += gravity * Time.deltaTime;
         transform.position += direction * Time.deltaTime;
 
@@ -55,19 +55,19 @@ public class Player : MonoBehaviour
         transform.eulerAngles = rotation;
     }
 
-    //flying bird animation
+    // flying bird animation
     private void AnimateBirdYellow() {
         currSpriteIndex++;
 
-        //loop back
+        // loop back
         if(currSpriteIndex == yellowSprites.Length) {
             currSpriteIndex = 0;
         }
-        //update sprites
+        // update sprites
         sRender.sprite = yellowSprites[currSpriteIndex];
     }
     
-    //same but blue
+    // same but blue
     private void AnimateBirdBlue() {
         currSpriteIndex++;
         if(currSpriteIndex == blueSprites.Length) {
@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
         sRender.sprite = blueSprites[currSpriteIndex];
     }
 
+    // collision handler
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Pipe-bottom") {
             hitPipe.Play();

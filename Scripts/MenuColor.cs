@@ -1,6 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+/*  
+    this could be implemented using events and delegates
+    but for small game my implementation is "ok"
+*/
 
 public class MenuColor : MonoBehaviour
 {
@@ -14,9 +17,9 @@ public class MenuColor : MonoBehaviour
     void Update()
     {
         if(GameManager.isDarkMode) {
-        renderer1.material.color = Color.blue;
+            renderer1.material.color = Color.blue;
         } else {
-        renderer1.material.color = Color.yellow;
+            renderer1.material.color = Color.yellow;
         }     
     }
 }
