@@ -14,8 +14,8 @@ Reamke of famous FlappyBird game, with similar gameplay and physics
    ![image](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/47c45993-b5d2-44c7-a55d-9db0f66269b4)
     
     - (alternative)from google drive:
-    link 1: https://drive.google.com/file/d/1kYZkDttmBKzClTKaWpr2dkczUyntmMmA/view?usp=share_link
-    link 2: https://drive.google.com/file/d/1gZ185uqRCZJ5lQyFs2Hgsg78IIQfl6cI/view?usp=share_link
+    link 1: https://drive.google.com/file/d/1Fj5opY5XXsNYhBEF6PuFOp_OqVPZeiXl/view?usp=share_link
+    link 2: https://drive.google.com/file/d/1NuTEbB78LonPOCQuUmuykNmTnuCgz9sn/view?usp=share_link
 
 ### Step 2: Exctract it into 1 single folder.(IMPORTANT: all of the contents of the archive must be in one folder)
 ![image](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/9817586c-1d87-4e50-88dd-4319c0a06330)
