@@ -5,13 +5,13 @@ Reamke of famous FlappyBird game, with similar gameplay and physics
 
 ![dark mode switch](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/7963775d-80dd-46c1-a80f-f64329aacbd8)
 - Light UI: 
-<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/26c98eb4-384f-4dd9-958a-74d99235ab18" alt="drawing" width="450"/>
-<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/660323c5-b675-4d1d-b0cd-67006f73fc2a" alt="drawing" width="450"/>
+<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/26c98eb4-384f-4dd9-958a-74d99235ab18" alt="drawing" width="400"/>
+<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/660323c5-b675-4d1d-b0cd-67006f73fc2a" alt="drawing" width="400"/>
 
 
 - Dark UI:
-<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/abb697a6-3770-4df4-bff4-17a6db4a9629" alt="drawing" width="450"/>
-<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/eccad094-8bb7-4946-a06b-2dbb1ba634db" alt="drawing" width="450"/>
+<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/abb697a6-3770-4df4-bff4-17a6db4a9629" alt="drawing" width="400"/>
+<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/eccad094-8bb7-4946-a06b-2dbb1ba634db" alt="drawing" width="400"/>
 
 - Current score tracker
 
@@ -31,8 +31,8 @@ Reamke of famous FlappyBird game, with similar gameplay and physics
 
 - Gradually increasing difficulty
 
-<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/e1c90dee-7436-4de3-8d92-1017ea7af3af" alt="drawing" width="450"/>
-<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/f38dd262-f2f7-494b-bb0b-0a7c77ee2f99" alt="drawing" width="450"/>
+<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/e1c90dee-7436-4de3-8d92-1017ea7af3af" alt="drawing" width="400"/>
+<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/f38dd262-f2f7-494b-bb0b-0a7c77ee2f99" alt="drawing" width="400"/>
 
 - Obstacle pipes with random hights
 
@@ -40,7 +40,7 @@ Reamke of famous FlappyBird game, with similar gameplay and physics
 
 - Menu dialog wich contains fields from above
 
-<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/660323c5-b675-4d1d-b0cd-67006f73fc2a" alt="drawing" width="450"/>
+<img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/660323c5-b675-4d1d-b0cd-67006f73fc2a" alt="drawing" width="400"/>
 
 - Random generation of clouds
 ![clouds](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/b185c49e-37bf-4fbf-b43a-fa4343dd103e)
