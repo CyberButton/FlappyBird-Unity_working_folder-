@@ -81,6 +81,8 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Pipe-bottom") {
             hitPipe.Play();
             FindObjectOfType<GameManager>().HitObstacle();
+            CancelInvoke(nameof(AnimateBirdYellow));
+            CancelInvoke(nameof(AnimateBirdBlue));
         } else if(other.gameObject.tag == "Score") {
             addScore.Play();
             FindObjectOfType<GameManager>().IncrementScore();
