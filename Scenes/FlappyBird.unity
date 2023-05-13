@@ -1092,6 +1092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottomPipePrefab: {fileID: 5139712171422370655, guid: 63326ab3e75d43e4cab1008d058f364d, type: 3}
+  bottomPipePrefabRed: {fileID: 1420744499737682873, guid: 3498a95a9a28fb149955e2bb399fcb38, type: 3}
   scoreHitboxPrefab: {fileID: 8224545862398192726, guid: 2d5b2dfecc771b842a80e0a510231bbb, type: 3}
   initialSpawnRate: 1.5
   minSpawnRate: 0.5
