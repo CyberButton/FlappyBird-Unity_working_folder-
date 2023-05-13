@@ -1,5 +1,12 @@
 # FlappyBird
 Reamke of famous FlappyBird game, with similar gameplay and physics
+
+## How to Install:
+
+## Game preview:
+
+![trailer_Trim (3)](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/e0e14d5d-67c1-41bd-9b12-20cb757fb332)
+
 ## Game features:
 - Dark-Mode switch
 
@@ -43,6 +50,7 @@ Reamke of famous FlappyBird game, with similar gameplay and physics
 <img src="https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/660323c5-b675-4d1d-b0cd-67006f73fc2a" alt="drawing" width="400"/>
 
 - Random generation of clouds
+
 ![clouds](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/b185c49e-37bf-4fbf-b43a-fa4343dd103e)
 
 - Bird drops feather when flaps
@@ -51,7 +59,7 @@ Reamke of famous FlappyBird game, with similar gameplay and physics
 
 - Sound Effects + Background music
 
-![trailer_Trim (1)](https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/e85c10fb-76bc-4b0d-8061-a18c0d795196)
+https://github.com/CyberButton/FlappyBird-Unity_working_folder-/assets/67738637/7ef92dcc-1f94-40d7-97e8-f52d4ef60772
 
 
 
