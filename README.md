@@ -1,5 +1,5 @@
 # FlappyBird
-Reamke of famous FlappyBird game, with similar gameplay and physics
+Remake of famous FlappyBird game, with similar gameplay and physics
 
 ---
 
